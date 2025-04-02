@@ -3,7 +3,6 @@ import React from 'react';
 import Layout from '@/components/Layout';
 import Logo from '@/components/Logo';
 import LogoGrid from '@/components/LogoGrid';
-import { Globe } from '@/components/Globe';
 
 const Index = () => {
   return (
@@ -17,14 +16,8 @@ const Index = () => {
           Ventures, Projects, and Experiments by Michael Israel
         </h2>
         
-        <div className="relative w-full">
-          <div className="absolute inset-0 z-0">
-            <Globe />
-          </div>
-          
-          <div className="relative z-10 pt-20 pb-20 w-full max-w-5xl mx-auto fade-in fade-in-delay-3">
-            <LogoGrid />
-          </div>
+        <div className="w-full max-w-5xl mx-auto fade-in fade-in-delay-3 py-10">
+          <LogoGrid />
         </div>
       </div>
     </Layout>
