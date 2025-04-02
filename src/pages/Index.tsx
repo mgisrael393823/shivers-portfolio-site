@@ -8,7 +8,7 @@ const Index = () => {
   return (
     <Layout>
       <div className="flex flex-col items-center justify-center py-20">
-        <div className="mb-10 pt-16 pb-8">
+        <div className="mt-10 pt-16 pb-8">
           <Logo size="lg" />
         </div>
         

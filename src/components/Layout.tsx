@@ -14,12 +14,12 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
-      <main className="flex-grow pt-24 px-6 md:px-12">
+      <main className="flex-grow px-6 md:px-12">
         <div className="container mx-auto">
           {children}
         </div>
       </main>
+      <Navbar />
       <footer className="py-8 px-6 md:px-12 border-t border-shivers-400/20">
         <div className="container mx-auto text-center">
           <p className="text-shivers-300 text-sm">
