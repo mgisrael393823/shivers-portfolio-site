@@ -19,11 +19,11 @@ const Logo = ({ size = 'md', className }: LogoProps) => {
     return () => clearTimeout(timer);
   }, []);
   
-  // Size classes based on prop - increased sizes by 20-30%
+  // Size classes based on prop
   const sizeClasses = {
-    sm: 'text-3xl', // Increased from text-2xl
-    md: 'text-6xl', // Increased from text-5xl
-    lg: 'text-8xl', // Increased from text-7xl
+    sm: 'h-8', // Small logo size
+    md: 'h-12', // Medium logo size
+    lg: 'h-20', // Large logo size
   };
 
   return (
@@ -35,9 +35,14 @@ const Logo = ({ size = 'md', className }: LogoProps) => {
         className
       )}
     >
-      <h1 className={`font-poppins font-light ${sizeClasses[size]} tracking-wider text-shivers-100 logo`}>
-        Shivers
-      </h1>
+      <img 
+        src="/homepage-logos/DISRVPT_WEBSITELOGO.png" 
+        alt="DISRVPT" 
+        className={cn(
+          sizeClasses[size],
+          "object-contain logo"
+        )}
+      />
     </Link>
   );
 };

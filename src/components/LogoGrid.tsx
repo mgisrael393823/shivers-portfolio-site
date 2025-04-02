@@ -21,14 +21,14 @@ const LogoGrid = () => {
     return () => clearTimeout(timer);
   }, []);
   
-  // Exactly 6 logos as requested
+  // Updated with actual logo files
   const [logos] = useState<LogoItem[]>([
-    { id: 1, src: '/homepage-logos/sample-logo.svg', alt: 'Venture 1', title: 'Venture One' },
-    { id: 2, src: '/placeholder.svg', alt: 'AI Projects', title: 'AI Projects' },
-    { id: 3, src: '/placeholder.svg', alt: 'Web3 Experiments', title: 'Web3 Experiments' },
-    { id: 4, src: '/placeholder.svg', alt: 'Digital Labs', title: 'Digital Labs' },
-    { id: 5, src: '/placeholder.svg', alt: 'Fintech Apps', title: 'Fintech Apps' },
-    { id: 6, src: '/placeholder.svg', alt: 'Health Tech', title: 'Health Tech' },
+    { id: 1, src: '/homepage-logos/MODE_LOGO.webp', alt: 'MODE', title: 'MODE' },
+    { id: 2, src: '/homepage-logos/bumpout_logo.webp', alt: 'Bumpout', title: 'Bumpout' },
+    { id: 3, src: '/homepage-logos/finalyze_logo.webp', alt: 'Finalyze', title: 'Finalyze' },
+    { id: 4, src: '/homepage-logos/mcc_logo.webp', alt: 'MCC', title: 'MCC' },
+    { id: 5, src: '/homepage-logos/shapack_logo.webp', alt: 'Shapack', title: 'Shapack' },
+    { id: 6, src: '/homepage-logos/xco_logo.webp', alt: 'XCO', title: 'XCO' },
   ]);
 
   // Animation variants for each logo
