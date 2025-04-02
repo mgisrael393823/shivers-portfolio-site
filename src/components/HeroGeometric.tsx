@@ -81,7 +81,7 @@ function HeroGeometric({
     className?: string;
 }) {
     return (
-        <div className={cn("relative w-full overflow-hidden", className)}>
+        <div className={cn("relative w-full overflow-hidden pointer-events-none", className)}>
             <div className="absolute inset-0 overflow-hidden">
                 <ElegantShape
                     delay={0.3}
