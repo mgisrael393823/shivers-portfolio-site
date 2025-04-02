@@ -57,12 +57,12 @@ const NavLink = ({ to, active, children }: NavLinkProps) => {
       className={cn(
         'font-poppins font-light text-sm tracking-wider uppercase relative transition-colors duration-300',
         active 
-          ? 'text-shivers-100' 
-          : 'text-shivers-200 hover:text-shivers-100',
+          ? 'text-black' 
+          : 'text-black hover:text-gray-700',
         'after:content-[""] after:absolute after:w-full after:h-[1px] after:bottom-[-4px] after:left-0',
         active 
-          ? 'after:bg-gradient-to-r after:from-shivers-300 after:to-shivers-100 after:opacity-100' 
-          : 'after:bg-shivers-200 after:opacity-0 hover:after:opacity-100',
+          ? 'after:bg-gradient-to-r after:from-gray-800 after:to-black after:opacity-100' 
+          : 'after:bg-black after:opacity-0 hover:after:opacity-100',
         'after:transition-all after:duration-300'
       )}
     >
