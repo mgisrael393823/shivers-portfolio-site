@@ -1,9 +1,11 @@
 
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { Circle } from "lucide-react";
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+
 
 function ElegantShape({
     className,
@@ -124,6 +126,25 @@ function HeroGeometric({
                     rotate={-25}
                     gradient="from-shivers-200/[0.15]"
                     className="left-[20%] md:left-[25%] top-[5%] md:top-[10%]"
+                />
+                
+                {/* Add more shapes down the page */}
+                <ElegantShape
+                    delay={0.8}
+                    width={400}
+                    height={90}
+                    rotate={18}
+                    gradient="from-shivers-300/[0.15]"
+                    className="right-[10%] md:right-[15%] bottom-[30%]"
+                />
+                
+                <ElegantShape
+                    delay={0.9}
+                    width={250}
+                    height={70}
+                    rotate={-12}
+                    gradient="from-shivers-400/[0.15]"
+                    className="left-[15%] md:left-[20%] bottom-[40%]"
                 />
             </div>
             {children}

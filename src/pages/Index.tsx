@@ -8,7 +8,7 @@ import { HeroGeometric } from '@/components/HeroGeometric';
 const Index = () => {
   return (
     <Layout>
-      <HeroGeometric className="min-h-screen absolute inset-0 -z-10">
+      <HeroGeometric className="fixed inset-0 -z-10">
         {/* The geometric shapes will be rendered in the background */}
       </HeroGeometric>
       
