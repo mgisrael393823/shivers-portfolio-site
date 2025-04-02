@@ -8,11 +8,11 @@ const Index = () => {
   return (
     <Layout>
       <div className="flex flex-col items-center justify-center py-20">
-        <div className="mb-10 pt-8">
+        <div className="mb-10 pt-16 pb-8">
           <Logo size="lg" />
         </div>
         
-        <h2 className="text-center text-xl md:text-2xl font-poppins font-light text-shivers-200 mb-20 max-w-2xl mx-auto fade-in fade-in-delay-1">
+        <h2 className="text-center text-2xl md:text-4xl font-light tracking-wide text-shivers-200 mb-20 max-w-2xl mx-auto fade-in fade-in-delay-1">
           Ventures, Projects, and Experiments by Michael Israel
         </h2>
         

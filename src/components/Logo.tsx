@@ -19,11 +19,11 @@ const Logo = ({ size = 'md', className }: LogoProps) => {
     return () => clearTimeout(timer);
   }, []);
   
-  // Size classes based on prop
+  // Size classes based on prop - increased sizes by 20-30%
   const sizeClasses = {
-    sm: 'text-2xl',
-    md: 'text-5xl', // Increased from text-4xl
-    lg: 'text-7xl', // Increased from text-6xl
+    sm: 'text-3xl', // Increased from text-2xl
+    md: 'text-6xl', // Increased from text-5xl
+    lg: 'text-8xl', // Increased from text-7xl
   };
 
   return (
