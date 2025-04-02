@@ -21,14 +21,14 @@ const LogoGrid = () => {
     return () => clearTimeout(timer);
   }, []);
   
-  // Sample logos - in a real app, these would be loaded from /homepage-logos
+  // Exactly 6 logos as requested
   const [logos] = useState<LogoItem[]>([
     { id: 1, src: '/homepage-logos/sample-logo.svg', alt: 'Venture 1', title: 'Venture One' },
-    { id: 2, src: '/placeholder.svg', alt: 'Project 2', title: 'Project Two' },
-    { id: 3, src: '/placeholder.svg', alt: 'Experiment 3', title: 'Experiment Three' },
-    { id: 4, src: '/placeholder.svg', alt: 'Venture 4', title: 'Venture Four' },
-    { id: 5, src: '/placeholder.svg', alt: 'Project 5', title: 'Project Five' },
-    { id: 6, src: '/placeholder.svg', alt: 'Experiment 6', title: 'Experiment Six' },
+    { id: 2, src: '/placeholder.svg', alt: 'AI Projects', title: 'AI Projects' },
+    { id: 3, src: '/placeholder.svg', alt: 'Web3 Experiments', title: 'Web3 Experiments' },
+    { id: 4, src: '/placeholder.svg', alt: 'Digital Labs', title: 'Digital Labs' },
+    { id: 5, src: '/placeholder.svg', alt: 'Fintech Apps', title: 'Fintech Apps' },
+    { id: 6, src: '/placeholder.svg', alt: 'Health Tech', title: 'Health Tech' },
   ]);
 
   // Animation variants for each logo
@@ -43,7 +43,7 @@ const LogoGrid = () => {
 
   return (
     <div className={cn(
-      "logo-grid transition-all duration-700",
+      "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 transition-all duration-700 z-10 relative",
       isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
     )}>
       {logos.map((logo, index) => (
@@ -61,7 +61,7 @@ const LogoGrid = () => {
                 src={logo.src}
                 alt={logo.alt}
                 className={cn(
-                  'w-28 h-28 object-contain transition-all duration-300',
+                  'w-24 h-24 object-contain transition-all duration-300',
                   animationVariants[index % animationVariants.length],
                   index % 2 === 0 ? 'animate-float' : 'animate-pulse-subtle'
                 )}
@@ -74,7 +74,7 @@ const LogoGrid = () => {
                 src={logo.src}
                 alt={logo.alt}
                 className={cn(
-                  'w-28 h-28 object-contain transition-all duration-300',
+                  'w-24 h-24 object-contain transition-all duration-300',
                   animationVariants[index % animationVariants.length],
                   index % 2 === 0 ? 'animate-float' : 'animate-pulse-subtle'
                 )}

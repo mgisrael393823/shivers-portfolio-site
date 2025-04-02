@@ -17,10 +17,14 @@ const Index = () => {
           Ventures, Projects, and Experiments by Michael Israel
         </h2>
         
-        <Globe />
-        
-        <div className="w-full max-w-5xl mx-auto mb-20 fade-in fade-in-delay-3">
-          <LogoGrid />
+        <div className="relative w-full">
+          <div className="absolute inset-0 z-0">
+            <Globe />
+          </div>
+          
+          <div className="relative z-10 pt-20 pb-20 w-full max-w-5xl mx-auto fade-in fade-in-delay-3">
+            <LogoGrid />
+          </div>
         </div>
       </div>
     </Layout>
