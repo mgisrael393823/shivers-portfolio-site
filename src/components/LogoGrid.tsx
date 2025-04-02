@@ -31,55 +31,33 @@ const LogoGrid = () => {
     { id: 6, src: '/homepage-logos/xco_logo.webp', alt: 'XCO', title: 'XCO' },
   ]);
 
-  // Animation variants for each logo
-  const animationVariants = [
-    'hover:opacity-90',
-    'hover:rotate-3',
-    'hover:brightness-110',
-    'hover:contrast-110',
-    'hover:saturate-150',
-    'hover:hue-rotate-15',
-  ];
-
   return (
     <div className={cn(
-      "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 transition-all duration-700 z-20 relative",
+      "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 transition-all duration-700 z-20 relative",
       isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
     )}>
       {logos.map((logo, index) => (
         <div 
           key={logo.id} 
-          className="logo-container"
-          style={{ 
-            animationDelay: `${0.2 + (index * 0.1)}s`,
-            transitionDelay: `${0.1 * index}s`
-          }}
+          className="logo-container bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-shivers-300/10 hover:border-shivers-300/30 transition-all duration-300"
         >
           {logo.link ? (
             <a href={logo.link} target="_blank" rel="noopener noreferrer" className="block">
               <img
                 src={logo.src}
                 alt={logo.alt}
-                className={cn(
-                  'w-full h-auto max-h-20 object-contain transition-all duration-300',
-                  animationVariants[index % animationVariants.length],
-                  index % 2 === 0 ? 'animate-float' : 'animate-pulse-subtle'
-                )}
+                className="w-full h-auto max-h-24 object-contain transition-all duration-300 hover:scale-105"
               />
-              <div className="logo-title">{logo.title}</div>
+              <div className="mt-4 text-shivers-200 font-medium text-base">{logo.title}</div>
             </a>
           ) : (
             <>
               <img
                 src={logo.src}
                 alt={logo.alt}
-                className={cn(
-                  'w-full h-auto max-h-20 object-contain transition-all duration-300',
-                  animationVariants[index % animationVariants.length],
-                  index % 2 === 0 ? 'animate-float' : 'animate-pulse-subtle'
-                )}
+                className="w-full h-auto max-h-24 object-contain transition-all duration-300 hover:scale-105"
               />
-              <div className="logo-title">{logo.title}</div>
+              <div className="mt-4 text-shivers-200 font-medium text-base">{logo.title}</div>
             </>
           )}
         </div>
