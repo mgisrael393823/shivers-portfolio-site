@@ -54,37 +54,94 @@
   }
 
   body {
-    @apply bg-white text-shivers-500 font-sans font-light;
+    @apply bg-gradient-to-b from-shivers-100 to-shivers-500 min-h-screen text-shivers-200 font-sans font-light;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-poppins font-light;
+    @apply font-poppins font-light tracking-wide leading-tight;
   }
 }
 
 /* Custom classes */
 .logo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 2rem;
   place-items: center;
 }
 
 .logo-container {
-  @apply flex items-center justify-center p-4 w-full h-32 bg-white rounded-md shadow-sm transition-all duration-300;
+  @apply flex flex-col items-center justify-center p-6 w-full h-40 bg-white/10 backdrop-blur-sm 
+         rounded-2xl shadow-lg transition-all duration-300 border border-white/20;
 }
 
 .logo-container:hover {
-  @apply transform scale-105 shadow-md;
+  @apply transform scale-105 shadow-xl border-shivers-300/50;
+  box-shadow: 0 0 15px rgba(122, 134, 159, 0.2);
+}
+
+.logo-title {
+  @apply mt-3 text-sm text-shivers-200 font-medium opacity-80;
 }
 
 /* Navbar transition */
 .navbar-scroll {
-  @apply bg-white/80 backdrop-blur-sm shadow-sm;
+  @apply bg-shivers-500/70 backdrop-blur-md shadow-md border-b border-shivers-400/30;
+  height: 60px;
+}
+
+.navbar-transparent {
+  @apply bg-transparent;
+  height: 80px;
 }
 
 .logo {
-  @apply transition-transform duration-300 hover:scale-105;
+  @apply transition-all duration-500 hover:scale-105;
+}
+
+/* Page transitions */
+.page-enter {
+  @apply opacity-0;
+}
+
+.page-enter-active {
+  @apply opacity-100 transition-opacity duration-300;
+}
+
+.page-exit {
+  @apply opacity-100;
+}
+
+.page-exit-active {
+  @apply opacity-0 transition-opacity duration-300;
+}
+
+/* Animated fade-in for sections */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.fade-in-delay-1 {
+  animation-delay: 0.2s;
+}
+
+.fade-in-delay-2 {
+  animation-delay: 0.4s;
+}
+
+.fade-in-delay-3 {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 640px) {

@@ -23,12 +23,12 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-12 py-4',
-        scrolled ? 'navbar-scroll' : 'bg-transparent'
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-12 flex items-center',
+        scrolled ? 'navbar-scroll' : 'navbar-transparent'
       )}
     >
       <div className="container mx-auto flex justify-center items-center">
-        <div className="flex space-x-8 md:space-x-12">
+        <div className="flex space-x-10 md:space-x-16">
           <NavLink to="/" active={location.pathname === '/'}>
             Home
           </NavLink>
@@ -57,13 +57,13 @@ const NavLink = ({ to, active, children }: NavLinkProps) => {
       className={cn(
         'font-poppins font-light text-sm tracking-wider uppercase relative transition-colors duration-300',
         active 
-          ? 'text-shivers-500' 
-          : 'text-shivers-300 hover:text-shivers-500',
-        'after:content-[""] after:absolute after:w-full after:h-[1px] after:bottom-[-2px] after:left-0',
+          ? 'text-shivers-100' 
+          : 'text-shivers-200 hover:text-shivers-100',
+        'after:content-[""] after:absolute after:w-full after:h-[1px] after:bottom-[-4px] after:left-0',
         active 
-          ? 'after:bg-shivers-500 after:opacity-100' 
-          : 'after:bg-shivers-300 after:opacity-0 hover:after:opacity-100',
-        'after:transition-opacity after:duration-300'
+          ? 'after:bg-gradient-to-r after:from-shivers-300 after:to-shivers-100 after:opacity-100' 
+          : 'after:bg-shivers-200 after:opacity-0 hover:after:opacity-100',
+        'after:transition-all after:duration-300'
       )}
     >
       {children}
