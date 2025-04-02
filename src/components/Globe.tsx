@@ -1,7 +1,8 @@
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Sphere, MeshDistortMaterial } from '@react-three/drei';
+import * as THREE from 'three';
 import { useTheme } from '@/hooks/use-theme';
 
 function GlobeMesh() {
