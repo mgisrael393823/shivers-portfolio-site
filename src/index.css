@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
 @tailwind base;
@@ -90,7 +89,7 @@
 
 /* Navbar transition */
 .navbar-scroll {
-  @apply bg-shivers-500/70 backdrop-blur-md shadow-md border-t border-shivers-400/30;
+  @apply bg-shivers-500/70 backdrop-blur-md shadow-md border-b border-shivers-400/30;
   height: 60px;
 }
 

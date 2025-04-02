@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        'fixed bottom-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-12 flex items-center',
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-12 flex items-center',
         scrolled ? 'navbar-scroll' : 'navbar-transparent'
       )}
     >
