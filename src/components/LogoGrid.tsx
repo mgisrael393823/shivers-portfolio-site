@@ -43,7 +43,7 @@ const LogoGrid = () => {
 
   return (
     <div className={cn(
-      "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 transition-all duration-700 z-10 relative",
+      "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 transition-all duration-700 z-20 relative",
       isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
     )}>
       {logos.map((logo, index) => (

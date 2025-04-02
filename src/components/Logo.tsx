@@ -30,7 +30,7 @@ const Logo = ({ size = 'md', className }: LogoProps) => {
     <Link 
       to="/" 
       className={cn(
-        "inline-block transition-all duration-700",
+        "inline-block transition-all duration-700 relative z-20",
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
         className
       )}
