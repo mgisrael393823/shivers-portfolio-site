@@ -61,7 +61,7 @@ const LogoGrid = () => {
                 src={logo.src}
                 alt={logo.alt}
                 className={cn(
-                  'w-24 h-24 object-contain transition-all duration-300',
+                  'w-full h-auto max-h-20 object-contain transition-all duration-300',
                   animationVariants[index % animationVariants.length],
                   index % 2 === 0 ? 'animate-float' : 'animate-pulse-subtle'
                 )}
@@ -74,7 +74,7 @@ const LogoGrid = () => {
                 src={logo.src}
                 alt={logo.alt}
                 className={cn(
-                  'w-24 h-24 object-contain transition-all duration-300',
+                  'w-full h-auto max-h-20 object-contain transition-all duration-300',
                   animationVariants[index % animationVariants.length],
                   index % 2 === 0 ? 'animate-float' : 'animate-pulse-subtle'
                 )}

@@ -74,7 +74,7 @@
 }
 
 .logo-container {
-  @apply flex flex-col items-center justify-center p-6 w-full h-40 bg-shivers-400/20 backdrop-blur-sm 
+  @apply flex flex-col items-center justify-center p-8 w-full h-48 bg-shivers-400/20 backdrop-blur-sm 
          rounded-2xl shadow-lg transition-all duration-300 border border-shivers-300/20 
          hover:scale-105 hover:shadow-xl hover:bg-shivers-400/30 hover:border-shivers-300/50;
 }
@@ -84,7 +84,7 @@
 }
 
 .logo-title {
-  @apply mt-3 text-sm text-shivers-200 font-medium opacity-80;
+  @apply mt-4 text-sm text-shivers-200 font-medium opacity-80;
 }
 
 /* Navbar transition */
