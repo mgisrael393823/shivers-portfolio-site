@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '@/components/Layout';
 import Logo from '@/components/Logo';
 import LogoGrid from '@/components/LogoGrid';
-import Globe from '@/components/Globe';
+import { Globe } from '@/components/Globe';
 
 const Index = () => {
   return (
