@@ -39,32 +39,28 @@ const LogoGrid = () => {
       {logos.map((logo, index) => (
         <div 
           key={logo.id} 
-          className="logo-container bg-white dark:bg-white/20 p-8 rounded-xl border border-shivers-300/20 shadow-lg transition-all duration-300"
+          className="logo-container bg-white dark:bg-white/20 p-8 rounded-xl border border-shivers-300/20 shadow-lg"
         >
           {logo.link ? (
             <a href={logo.link} target="_blank" rel="noopener noreferrer" className="block">
               <img
                 src={logo.src}
                 alt={logo.alt}
-                className="w-full h-auto max-h-24 object-contain transition-all duration-300 hover:scale-105"
+                className="w-full h-auto max-h-24 object-contain"
                 style={{ 
                   filter: logo.id === 1 ? 'drop-shadow(0 0 4px rgba(0,0,0,0.3)) brightness(1.2) contrast(1.2)' : 'drop-shadow(0 0 2px rgba(0,0,0,0.2))'
                 }}
               />
-              <div className="mt-4 text-shivers-500 font-medium text-base">{logo.title}</div>
             </a>
           ) : (
-            <>
-              <img
-                src={logo.src}
-                alt={logo.alt}
-                className="w-full h-auto max-h-24 object-contain transition-all duration-300 hover:scale-105"
-                style={{ 
-                  filter: logo.id === 1 ? 'drop-shadow(0 0 4px rgba(0,0,0,0.3)) brightness(1.2) contrast(1.2)' : 'drop-shadow(0 0 2px rgba(0,0,0,0.2))'
-                }}
-              />
-              <div className="mt-4 text-shivers-500 font-medium text-base">{logo.title}</div>
-            </>
+            <img
+              src={logo.src}
+              alt={logo.alt}
+              className="w-full h-auto max-h-24 object-contain"
+              style={{ 
+                filter: logo.id === 1 ? 'drop-shadow(0 0 4px rgba(0,0,0,0.3)) brightness(1.2) contrast(1.2)' : 'drop-shadow(0 0 2px rgba(0,0,0,0.2))'
+              }}
+            />
           )}
         </div>
       ))}
