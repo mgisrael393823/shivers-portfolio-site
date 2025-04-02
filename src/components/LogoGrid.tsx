@@ -29,6 +29,9 @@ const LogoGrid = () => {
     { id: 4, src: '/placeholder.svg', alt: 'Venture 4', title: 'Venture Four' },
     { id: 5, src: '/placeholder.svg', alt: 'Project 5', title: 'Project Five' },
     { id: 6, src: '/placeholder.svg', alt: 'Experiment 6', title: 'Experiment Six' },
+    { id: 7, src: '/placeholder.svg', alt: 'Venture 7', title: 'Venture Seven' },
+    { id: 8, src: '/placeholder.svg', alt: 'Project 8', title: 'Project Eight' },
+    { id: 9, src: '/placeholder.svg', alt: 'Experiment 9', title: 'Experiment Nine' },
   ]);
 
   // Animation variants for each logo
