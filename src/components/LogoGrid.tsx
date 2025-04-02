@@ -39,7 +39,7 @@ const LogoGrid = () => {
       {logos.map((logo, index) => (
         <div 
           key={logo.id} 
-          className="logo-container bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-shivers-300/10 hover:border-shivers-300/30 transition-all duration-300"
+          className="logo-container bg-white dark:bg-white/20 p-8 rounded-xl border border-shivers-300/20 shadow-lg transition-all duration-300"
         >
           {logo.link ? (
             <a href={logo.link} target="_blank" rel="noopener noreferrer" className="block">
@@ -47,8 +47,11 @@ const LogoGrid = () => {
                 src={logo.src}
                 alt={logo.alt}
                 className="w-full h-auto max-h-24 object-contain transition-all duration-300 hover:scale-105"
+                style={{ 
+                  filter: logo.id === 1 ? 'drop-shadow(0 0 4px rgba(0,0,0,0.3)) brightness(1.2) contrast(1.2)' : 'drop-shadow(0 0 2px rgba(0,0,0,0.2))'
+                }}
               />
-              <div className="mt-4 text-shivers-200 font-medium text-base">{logo.title}</div>
+              <div className="mt-4 text-shivers-500 font-medium text-base">{logo.title}</div>
             </a>
           ) : (
             <>
@@ -56,8 +59,11 @@ const LogoGrid = () => {
                 src={logo.src}
                 alt={logo.alt}
                 className="w-full h-auto max-h-24 object-contain transition-all duration-300 hover:scale-105"
+                style={{ 
+                  filter: logo.id === 1 ? 'drop-shadow(0 0 4px rgba(0,0,0,0.3)) brightness(1.2) contrast(1.2)' : 'drop-shadow(0 0 2px rgba(0,0,0,0.2))'
+                }}
               />
-              <div className="mt-4 text-shivers-200 font-medium text-base">{logo.title}</div>
+              <div className="mt-4 text-shivers-500 font-medium text-base">{logo.title}</div>
             </>
           )}
         </div>
