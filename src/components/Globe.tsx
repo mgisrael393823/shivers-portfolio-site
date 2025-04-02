@@ -1,7 +1,7 @@
 
 import React, { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Sphere, MeshDistortMaterial } from '@react-three/drei';
+import { Sphere } from '@react-three/drei';
 import * as THREE from 'three';
 import { useTheme } from '@/hooks/use-theme';
 
@@ -17,11 +17,8 @@ function GlobeMesh() {
 
   return (
     <Sphere ref={ref} args={[1, 64, 64]} scale={1.5}>
-      <MeshDistortMaterial
+      <meshStandardMaterial 
         color="#7A869F"
-        attach="material"
-        distort={0.4}
-        speed={1.5}
         roughness={0.5}
         metalness={0.2}
       />
